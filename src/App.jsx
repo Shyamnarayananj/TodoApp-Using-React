@@ -18,7 +18,7 @@ function App() {
 
   const deleteTodo = (id) => {
     setTodos((prev) => prev.filter((todo) => todo.id !== id));
-  }; //30:08 End video timeline
+  }; 
   useEffect(() => {
     const todos = JSON.parse(localStorage.getItem("todos")); //converting localstorage item(string) into json
     if (todos && todos.length > 0) {
@@ -44,7 +44,6 @@ function App() {
     <TodoProvider
       value={{ todos, addTodo, updateTodo, deleteTodo, toggleComplete }}
     >
-      <TodoForm/>
       <div className="bg-[#172842] min-h-screen py-8">
                 <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
                     <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
